@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,9 +19,11 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} overflow-hidden`}>
+      <Script src="https://telegram.org/js/telegram-web-app.js" defer />
         <NextTopLoader />
         <Providers>
           <Toaster />
