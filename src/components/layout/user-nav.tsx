@@ -11,26 +11,23 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
+import { useTelegram } from '@/hooks/useTelegram';
+import { useRouter } from 'next/navigation';
+import { isNil } from 'lodash';
 export function UserNav() {
-  // const { data: session } = useSession();
-  const session = {
-    user: {
-      image: "",
-      name: "abc xyz",
-      email: "email"
-    }
-  }
-  if (session) {
+  const router = useRouter();
+  const { user } = useTelegram();
+  if (!isNil(user)) {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" className="relative h-8 w-8 rounded-full">
             <Avatar className="h-8 w-8">
               <AvatarImage
-                src={session.user?.image ?? ''}
-                alt={session.user?.name ?? ''}
+                src={user.username.charAt(0) ?? ''}
+                alt={user.username.charAt(0) ?? ''}
               />
-              <AvatarFallback>{session.user?.name?.[0]}</AvatarFallback>
+              <AvatarFallback>{user.username}</AvatarFallback>
             </Avatar>
           </Button>
         </DropdownMenuTrigger>
@@ -38,16 +35,16 @@ export function UserNav() {
           <DropdownMenuLabel className="font-normal">
             <div className="flex flex-col space-y-1">
               <p className="text-sm font-medium leading-none">
-                {session.user?.name}
+                {user.username}
               </p>
               <p className="text-xs leading-none text-muted-foreground">
-                {session.user?.email}
+                {user.first_name} {user.last_name}
               </p>
             </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => router.push("/telegram")}>
               Profile
               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
