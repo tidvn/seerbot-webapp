@@ -59,6 +59,7 @@ export default function AuthenticationPage() {
               Enter your email below to create your account
             </p>
           </div>
+          <Button
           {/* <UserAuthForm /> */}
           <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{' '}
