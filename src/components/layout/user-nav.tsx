@@ -16,8 +16,8 @@ export function UserNav() {
   const session = {
     user: {
       image: "",
-      name: "",
-      email: ""
+      name: "abc xyz",
+      email: "email"
     }
   }
   if (session) {

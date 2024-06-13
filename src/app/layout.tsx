@@ -1,4 +1,4 @@
-// import Providers from '@/components/layout/providers';
+import Providers from '@/components/layout/providers';
 import { Toaster } from '@/components/ui/toaster';
 import '@uploadthing/react/styles.css';
 import type { Metadata } from 'next';
@@ -22,10 +22,10 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} overflow-hidden`}>
         <NextTopLoader />
-        {/* <Providers session={null}> */}
+        <Providers>
           <Toaster />
           {children}
-        {/* </Providers> */}
+        </Providers>
       </body>
     </html>
   );
