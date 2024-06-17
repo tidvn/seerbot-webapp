@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import ThemeProvider from './ThemeToggle/theme-provider';
 import { useTelegram } from '@/hooks/useTelegram';
+import axios from 'axios';
 export default function Providers({
     children
 }: {
@@ -12,7 +13,13 @@ export default function Providers({
         function initTg() {
             if (typeof window !== 'undefined' && window.Telegram && window.Telegram.WebApp) {
                 const tgData = window.Telegram.WebApp
-                setTg(tgData);
+                axios.post('/api/auth/validate-hash', { hash: window.Telegram.WebApp.initData })
+                    .then((response) => {
+                        if (response.status === 200) {
+                            setTg(tgData)
+                        }
+                    });
+
             } else {
                 setTimeout(initTg, 500);
             }
