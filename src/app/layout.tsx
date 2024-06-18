@@ -1,4 +1,4 @@
-import Providers from '@/components/app/layout/providers';
+import Providers from '@/components/app/old/layout/providers';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
