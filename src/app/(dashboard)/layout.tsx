@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
 'use client';
 import React, { useEffect } from 'react';
 import { useTelegram } from '@/hooks/useTelegram';
