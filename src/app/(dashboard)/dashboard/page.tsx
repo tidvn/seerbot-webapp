@@ -1,8 +1,5 @@
-import { DataChart } from '@/components/app/old/portfolio/chart';
-import { CalendarDateRangePicker } from '@/components/common/date-range-picker';
-import { Overview } from '@/components/common/overview';
+import { DataChart } from '@/components/app/portfolio/chart';
 import { RecentSales } from '@/components/common/recent-sales';
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
