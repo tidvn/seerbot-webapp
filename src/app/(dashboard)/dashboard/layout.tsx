@@ -1,5 +1,5 @@
-import Header from '@/components/layout/header';
-import Sidebar from '@/components/layout/sidebar';
+import Header from '@/components/app/layout/header';
+import Sidebar from '@/components/app/layout/sidebar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
