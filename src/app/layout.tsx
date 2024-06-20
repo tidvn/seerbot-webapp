@@ -22,7 +22,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(fontSans.variable, `overflow-hidden`, `block md:hidden`)}>
+      <body className={cn(fontSans.variable, `block md:hidden`)}>
         <Script src="https://telegram.org/js/telegram-web-app.js" defer />
         <NextTopLoader />
         <Providers>
