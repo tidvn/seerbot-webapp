@@ -1,6 +1,7 @@
 import {
   AlertTriangle,
   ArrowRight,
+  Bell,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -10,6 +11,7 @@ import {
   File,
   FileText,
   HelpCircle,
+  Home,
   Image,
   Laptop,
   LayoutDashboardIcon,
@@ -21,6 +23,7 @@ import {
   MoreVertical,
   Pizza,
   Plus,
+  Search,
   Settings,
   SunMedium,
   Trash,
@@ -78,5 +81,8 @@ export const Icons = {
     </svg>
   ),
   twitter: Twitter,
-  check: Check
+  check: Check,
+  bell: Bell,
+  home: Home,
+  search: Search,
 };
