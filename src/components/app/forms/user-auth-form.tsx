@@ -13,7 +13,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
-import GoogleSignInButton from '../../../common/github-auth-button';
+import GoogleSignInButton from '../../common/github-auth-button';
 
 const formSchema = z.object({
   email: z.string().email({ message: 'Enter a valid email address' })
