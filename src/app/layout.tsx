@@ -2,7 +2,6 @@ import Providers from '@/components/app/old/layout/providers';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
 import { cn } from '@/lib/utils';

@@ -1,6 +1,4 @@
 import { CalendarDateRangePicker } from '@/components/common/date-range-picker';
-import { Overview } from '@/components/common/overview';
-import { RecentSales } from '@/components/common/recent-sales';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -142,7 +140,6 @@ export default function page() {
                   <CardTitle>Overview</CardTitle>
                 </CardHeader>
                 <CardContent className="pl-2">
-                  <Overview />
                 </CardContent>
               </Card>
               <Card className="col-span-4 md:col-span-3">
@@ -153,7 +150,6 @@ export default function page() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <RecentSales />
                 </CardContent>
               </Card>
             </div>
