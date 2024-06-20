@@ -2,8 +2,6 @@
 
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-// total: Math.floor(Math.random() * 5000) + 1000
-
 const data = [
   {
     day: '12/11',
@@ -41,9 +39,20 @@ const data = [
     lose: Math.floor(Math.random() * 5000) + 1000,
     all: Math.floor(Math.random() * 5000) + 1000,
   },
+  {
+    day: '17/11',
+    win: Math.floor(Math.random() * 5000) + 1000,
+    lose: Math.floor(Math.random() * 5000) + 1000,
+    all: Math.floor(Math.random() * 5000) + 1000,
+  },{
+    day: '18/11',
+    win: Math.floor(Math.random() * 5000) + 1000,
+    lose: Math.floor(Math.random() * 5000) + 1000,
+    all: Math.floor(Math.random() * 5000) + 1000,
+  },
 ];
 
-export function Overview() {
+export function DataChart() {
   return (
     <ResponsiveContainer width="100%" height={350}>
       <LineChart
