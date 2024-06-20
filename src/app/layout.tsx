@@ -7,8 +7,7 @@ import './globals.css';
 import Script from 'next/script';
 import { cn } from '@/lib/utils';
 import { appConfig } from '@/config/app.config';
-
-const inter = Inter({ subsets: ['latin'] });
+import { fontSans } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   title: appConfig.title,
@@ -23,7 +22,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, `overflow-hidden`, `block md:hidden`)}>
+      <body className={cn(fontSans.variable, `overflow-hidden`, `block md:hidden`)}>
         <Script src="https://telegram.org/js/telegram-web-app.js" defer />
         <NextTopLoader />
         <Providers>

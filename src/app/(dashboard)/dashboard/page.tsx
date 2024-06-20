@@ -1,4 +1,5 @@
 import { DataChart } from '@/components/app/portfolio/chart';
+import { HistoryTrading } from '@/components/app/portfolio/history-trading';
 import { RecentSales } from '@/components/common/recent-sales';
 import {
   Card,
@@ -85,9 +86,6 @@ export default function page() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">95%</div>
-                {/* <p className="text-xs text-muted-foreground">
-                    +180.1% from last month
-                  </p> */}
               </CardContent>
             </Card>
             <Card>
@@ -112,9 +110,6 @@ export default function page() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">305</div>
-                {/* <p className="text-xs text-muted-foreground">
-                    +19% from last month
-                  </p> */}
               </CardContent>
             </Card>
             <Card>
@@ -139,9 +134,6 @@ export default function page() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">19</div>
-                {/* <p className="text-xs text-muted-foreground">
-                    +201 since last hour
-                  </p> */}
               </CardContent>
             </Card>
             <Card>
@@ -168,9 +160,6 @@ export default function page() {
               </CardHeader>
               <CardContent>
                 <div className="text-xl font-bold text-green-500">29,781.6 $</div>
-                {/* <p className="text-xs text-muted-foreground">
-                    +19% from last month
-                  </p> */}
               </CardContent>
             </Card>
             <Card>
@@ -198,30 +187,50 @@ export default function page() {
               </CardHeader>
               <CardContent>
                 <div className="text-xl font-bold text-red-500">29,781.6 $</div>
-                {/* <p className="text-xs text-muted-foreground">
-                    +201 since last hour
-                  </p> */}
               </CardContent>
             </Card>
           </div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4">
             <Card className="col-span-4">
               <CardHeader>
-                <CardTitle>Overview</CardTitle>
+                <CardTitle>Statistical graph</CardTitle>
+                <div className="flex items-center justify-between space-y-2">
+                  <Select>
+                    <SelectTrigger className="w-[80px]">
+                      <SelectValue placeholder="Bitcoin" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="bitcoin">bitcoin</SelectItem>
+                      <SelectItem value="etherum">etherum</SelectItem>
+                      <SelectItem value="solana">solana</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <Select>
+                    <SelectTrigger className="w-[80px]">
+                      <SelectValue placeholder="Day" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="Day">Day</SelectItem>
+                      <SelectItem value="Week">Week</SelectItem>
+                      <SelectItem value="Month">Month</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </CardHeader>
               <CardContent className="pl-2">
                 <DataChart />
               </CardContent>
             </Card>
-            <Card className="col-span-4 md:col-span-3">
+            <Card className="col-span-4">
               <CardHeader>
-                <CardTitle>Recent Sales</CardTitle>
-                <CardDescription>
+                <CardTitle>History trading
+                </CardTitle>
+                {/* <CardDescription>
                   You made 265 sales this month.
-                </CardDescription>
+                </CardDescription> */}
               </CardHeader>
               <CardContent>
-                <RecentSales />
+                <HistoryTrading />
               </CardContent>
             </Card>
           </div>
