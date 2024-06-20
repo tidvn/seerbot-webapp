@@ -4,6 +4,12 @@ import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, X
 
 const data = [
   {
+    day: '11/11',
+    win: Math.floor(Math.random() * 5000) + 1000,
+    lose: Math.floor(Math.random() * 5000) + 1000,
+    all: Math.floor(Math.random() * 5000) + 1000,
+  },
+  {
     day: '12/11',
     win: Math.floor(Math.random() * 5000) + 1000,
     lose: Math.floor(Math.random() * 5000) + 1000,
@@ -38,13 +44,7 @@ const data = [
     win: Math.floor(Math.random() * 5000) + 1000,
     lose: Math.floor(Math.random() * 5000) + 1000,
     all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '17/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },{
+  }, {
     day: '18/11',
     win: Math.floor(Math.random() * 5000) + 1000,
     lose: Math.floor(Math.random() * 5000) + 1000,
@@ -54,6 +54,7 @@ const data = [
 
 export function DataChart() {
   return (
+    <>
     <ResponsiveContainer width="100%" height={350}>
       <LineChart
         // width={500}
@@ -88,5 +89,6 @@ export function DataChart() {
         <Line type="monotone" dataKey="all" stroke="#0099ff" name='All Trade' />
       </LineChart>
     </ResponsiveContainer>
+    </>
   );
 }
