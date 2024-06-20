@@ -1,6 +1,7 @@
-import { DataChart } from '@/components/app/portfolio/chart';
+// import { DataChart } from '@/components/app/portfolio/chart';
+import { ChartData } from '@/components/app/portfolio/chart';
 import { HistoryTrading } from '@/components/app/portfolio/history-trading';
-import { RecentSales } from '@/components/common/recent-sales';
+// import { RecentSales } from '@/components/common/recent-sales';
 import {
   Card,
   CardContent,
@@ -12,6 +13,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 export default function page() {
+  
   return (
     <ScrollArea className="h-full">
       <div className="flex-1 space-y-4 p-4 pt-6 md:p-8">
@@ -218,7 +220,7 @@ export default function page() {
                 </div>
               </CardHeader>
               <CardContent className="pl-2">
-                <DataChart />
+                <ChartData />
               </CardContent>
             </Card>
             <Card className="col-span-4">

@@ -1,94 +1,72 @@
-'use client';
+"use client"
 
-import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { ReactECharts } from "@/components/common/chart/React-ECharts";
+import { EChartsOption } from "echarts";
 
-const data = [
-  {
-    day: '11/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '12/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '13/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '14/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '15/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '16/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-  {
-    day: '17/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  }, {
-    day: '18/11',
-    win: Math.floor(Math.random() * 5000) + 1000,
-    lose: Math.floor(Math.random() * 5000) + 1000,
-    all: Math.floor(Math.random() * 5000) + 1000,
-  },
-];
 
-export function DataChart() {
+export function ChartData() {
+  const option: EChartsOption = {
+   
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        name: 'Email',
+        type: 'line',
+        stack: 'Total',
+        data: [120, 132, 101, 134, 90, 230, 210]
+      },
+      {
+        name: 'Union Ads',
+        type: 'line',
+        stack: 'Total',
+        data: [220, 182, 191, 234, 290, 330, 310]
+      },
+      {
+        name: 'Video Ads',
+        type: 'line',
+        stack: 'Total',
+        data: [150, 232, 201, 154, 190, 330, 410]
+      },
+      {
+        name: 'Direct',
+        type: 'line',
+        stack: 'Total',
+        data: [320, 332, 301, 334, 390, 330, 320]
+      },
+      {
+        name: 'Search Engine',
+        type: 'line',
+        stack: 'Total',
+        data: [820, 932, 901, 934, 1290, 1330, 1320]
+      }
+    ]
+  };
   return (
-    <>
-    <ResponsiveContainer width="100%" height={350}>
-      <LineChart
-        // width={500}
-        // height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 5,
-          left: 0,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis
-          dataKey="day"
-          stroke="#888888"
-          fontSize={12}
-          tickLine={false}
-          axisLine={false}
-        />
-        <YAxis
-          stroke="#888888"
-          fontSize={12}
-          tickLine={false}
-          axisLine={false}
-          tickFormatter={(value) => `$${value}`}
-        />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="lose" stroke="#ff0000" name='Lose Trade' />
-        <Line type="monotone" dataKey="win" stroke="#00cc00" name='Win Trade' />
-        <Line type="monotone" dataKey="all" stroke="#0099ff" name='All Trade' />
-      </LineChart>
-    </ResponsiveContainer>
-    </>
-  );
+    <ReactECharts option={option} />
+  )
+
 }
