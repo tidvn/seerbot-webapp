@@ -131,9 +131,6 @@ export default function page() {
               <CardHeader>
                 <CardTitle>History trading
                 </CardTitle>
-                {/* <CardDescription>
-                  You made 265 sales this month.
-                </CardDescription> */}
               </CardHeader>
               <CardContent>
                 <HistoryTrading />

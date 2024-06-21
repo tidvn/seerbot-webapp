@@ -1,7 +1,12 @@
+/* eslint-disable import/no-unresolved */
 import {
   AlertTriangle,
+  AreaChart,
+  ArrowDownIcon,
   ArrowRight,
+  ArrowUpIcon,
   Bell,
+  Bot,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -12,7 +17,7 @@ import {
   FileText,
   HelpCircle,
   Home,
-  Image,
+  Image as LucideImage,
   Laptop,
   LayoutDashboardIcon,
   Loader2,
@@ -31,7 +36,10 @@ import {
   User,
   User2Icon,
   UserX2Icon,
-  X
+  Wallet,
+  X,
+  ListOrdered,
+  ChevronDown
 } from 'lucide-react';
 
 export type Icon = LucideIcon;
@@ -46,11 +54,12 @@ export const Icons = {
   kanban: CircuitBoardIcon,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
+  chevronDown: ChevronDown,
   trash: Trash,
   employee: UserX2Icon,
   post: FileText,
   page: File,
-  media: Image,
+  media: LucideImage,
   settings: Settings,
   billing: CreditCard,
   ellipsis: MoreVertical,
@@ -193,11 +202,23 @@ export const Icons = {
       <path d="M12 4L10 6" stroke="#00BD46" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   ),
+  algorand: ({ ...props }: LucideProps) => (
+    <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path d="M239.18 239.32H201.81L177.54 149.04L125.36 239.33H83.64L164.29 99.57L151.31 51.05L42.56 239.36H0.820007L138.64 0.639999H175.18L191.18 59.95H228.88L203.14 104.71L239.18 239.32Z" fill="black" />
+    </svg>
 
+
+  ),
+  order: ListOrdered,
+  bot: Bot,
+  areaChart: AreaChart,
+  setting: Settings,
+  wallet: Wallet,
   twitter: Twitter,
   check: Check,
   bell: Bell,
   home: Home,
   search: Search,
-
+  arrowDown: ArrowDownIcon,
+  arrowUp: ArrowUpIcon,
 };
