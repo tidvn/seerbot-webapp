@@ -44,7 +44,7 @@ export default function page() {
     ]
     return (
         <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Transaction History</h2>
+            <h2 className="text-2xl font-bold mb-6">Order History</h2>
             <div className="space-y-4">
                 {transactions.map((transaction, index) => (<Collapsible key={index}>
                     <CollapsibleTrigger className="flex items-center justify-between w-full px-4 py-3 bg-muted rounded-md cursor-pointer">

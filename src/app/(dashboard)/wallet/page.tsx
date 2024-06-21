@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/common/icons"
-
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "@/components/ui/dialog"
+import Image from "next/image"
 export default function page() {
     return (
         <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -34,10 +35,28 @@ export default function page() {
                                 <SendIcon className="mr-2 h-5 w-5" />
                                 Send
                             </Button>
-                            <Button variant="outline">
-                                <ReceiptIcon className="mr-2 h-5 w-5" />
-                                Receive
-                            </Button>
+                            <div>
+                                <Dialog >
+                                    <DialogTrigger asChild>
+                                        <Button variant="outline">
+                                            <ReceiptIcon className="mr-2 h-5 w-5" />
+                                            Receive
+                                        </Button>
+                                    </DialogTrigger>
+                                    <DialogContent>
+                                        <div className="flex flex-col items-center justify-center gap-4 py-8">
+                                            <Image src="https://generated.vusercontent.net/placeholder.svg" width={200} height={200} alt="QR Code" className="rounded-md" />
+                                        </div>
+                                        <Button variant="outline">Copy Address</Button>
+                                        <DialogClose asChild>
+                                            <Button type="button">
+                                                Close
+                                            </Button>
+                                        </DialogClose>
+                                    </DialogContent>
+                                </Dialog>
+                            </div>
+
                             <Link href="/wallet/order" >
                                 <Button variant="outline">
                                     <Icons.order className="mr-2 h-5 w-5" />
