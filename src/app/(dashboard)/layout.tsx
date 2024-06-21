@@ -1,6 +1,6 @@
-import BottomTab from '@/components/app/old/layout/bottom-tab';
-import Header from '@/components/app/old/layout/header';
-import Sidebar from '@/components/app/old/layout/sidebar';
+import BottomTab from '@/components/app/layout/bottom-tab';
+import Header from '@/components/app/layout/header';
+import Sidebar from '@/components/app/layout/sidebar';
 
 // import React, { useEffect } from 'react';
 // import { useTelegram } from '@/hooks/useTelegram';

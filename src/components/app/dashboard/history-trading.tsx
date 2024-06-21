@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function HistoryTrading() {
   return (
     <div className="space-y-8">
@@ -61,7 +63,9 @@ export function HistoryTrading() {
           <p className="text-sm text-muted-foreground">09/08/2023 07:08:01</p>
           <p className="text-sm font-medium text-red-500 "> -1,69USD </p>
         </div>
-        {/* <div className="ml-auto font-medium">-1,69USD</div> */}
+      </div>
+      <div className="flex items-center justify-center">
+        <Link href={"/history-trade"}>View more...</Link>
       </div>
     </div>
   );
