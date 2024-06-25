@@ -1,4 +1,4 @@
-import { isHashValid } from "@/lib/utils";
+import { isHashValid } from "@/utils/cn";
 import { isNil } from "lodash";
 
 export async function POST(request: Request) {

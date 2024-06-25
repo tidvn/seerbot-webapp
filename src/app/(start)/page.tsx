@@ -2,7 +2,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/cn';
 import { useEffect } from 'react';
 import { useTelegram } from '@/hooks/useTelegram';
 import axios from 'axios';
