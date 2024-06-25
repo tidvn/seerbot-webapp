@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 import './globals.css';
 import Script from 'next/script';
-import { cn } from '@/lib/utils';
-import { appConfig } from '@/config/app.config';
-import { fontSans } from '@/lib/fonts';
+import { cn } from '@/utils';
+import { fontSans } from '@/utils/fonts';
+import { appConfig } from '@/constants/app.contants';
 
 export const metadata: Metadata = {
   title: appConfig.title,

@@ -11,7 +11,7 @@ export default function ListCoin() {
                 <TableHeader>
                     <TableRow>
                         <TableHead>Coin</TableHead>
-                        <TableHead>Time</TableHead>
+                        {/* <TableHead>Time</TableHead> */}
                         <TableHead>Predict</TableHead>
                         <TableHead>Change</TableHead>
                     </TableRow>
@@ -26,13 +26,13 @@ export default function ListCoin() {
                                 </Avatar>
                                 <div>
                                     <div className="font-bold text-blue-700">Bitcoin</div>
-                                    <div className="text-sm ">27,610.42 $</div>
+                                    <div className="text-sm">27,610.42 $</div>
                                 </div>
                             </TableCell>
-                            <TableCell>
+                            {/* <TableCell>
                                 <div className="text-sm ">09/08/2023</div>
                                 <div className="text-sm ">07:08:01</div>
-                            </TableCell>
+                            </TableCell> */}
                             <TableCell>
                                 <div className="text-sm  ">27,610.42 </div>
                             </TableCell>
