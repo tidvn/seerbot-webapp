@@ -10,7 +10,7 @@ export default function Header() {
       <nav className="flex h-14 items-center justify-between px-4">
         <div className="block lg:!hidden">
           <Link
-            href={'/dashboard'}
+            href={'/'}
           >
             <p><svg
               xmlns="http://www.w3.org/2000/svg"
