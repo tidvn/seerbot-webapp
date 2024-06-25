@@ -1,8 +1,7 @@
-import Providers from '@/components/app/old/layout/providers';
+import Providers from '@/components/app/layout/providers';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
 import { cn } from '@/lib/utils';
@@ -22,7 +21,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(fontSans.variable, `overflow-hidden`, `block md:hidden`)}>
+      <body className={cn(fontSans.variable, `block md:hidden`)}>
         <Script src="https://telegram.org/js/telegram-web-app.js" defer />
         <NextTopLoader />
         <Providers>
