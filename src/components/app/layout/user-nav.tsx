@@ -9,7 +9,7 @@ export function UserNav() {
       <Button variant="ghost" className="relative h-8 w-8 rounded-full">
         <Avatar className="h-8 w-8">
           <AvatarImage
-            src={user.username}
+            src={`https://ui-avatars.com/api/?name=${user.username}`}
             alt={user.username}
           />
           <AvatarFallback>{user.username}</AvatarFallback>

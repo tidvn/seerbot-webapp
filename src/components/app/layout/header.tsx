@@ -29,10 +29,6 @@ export default function Header() {
 
           </Link>
         </div>
-        {/* <div className={cn('block lg:!hidden')}>
-          <MobileSidebar />
-        </div> */}
-
         <div className="flex items-center gap-2">
           <UserNav />
           <ThemeToggle />
