@@ -1,26 +1,12 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/common/icons"
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "@/components/ui/dialog"
+import { Dialog, DialogTrigger, DialogContent, DialogClose } from "@/components/ui/dialog"
 import Image from "next/image"
 export default function page() {
     return (
-        <div className="flex min-h-screen flex-col bg-background text-foreground">
-            <header className="border-b bg-card py-3">
-                <div className="mx-auto flex items-center justify-between">
-                    <Link href="#" className="flex items-center gap-2 font-semibold" prefetch={false}>
-                        <WalletIcon className="h-6 w-6" />
-                        <span>My Wallet</span>
-                    </Link>
-                    <div className="flex items-center gap-4">
-                        <Button variant="ghost" size="icon">
-                            <Icons.bell className="h-5 w-5" />
-                            <span className="sr-only">Notifications</span>
-                        </Button>
-                    </div>
-                </div>
-            </header>
-            <main className="flex-1 py-8">
+        <div className="flex flex-col bg-background text-foreground">
+            <div className="flex-1 py-8">
                 <div className=" mx-auto grid gap-8">
                     <div className="grid gap-4">
                         <div className="bg-card rounded-lg p-6 flex flex-col items-center justify-center">
@@ -121,7 +107,7 @@ export default function page() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
         </div>
     )
 }
@@ -166,51 +152,6 @@ function EclipseIcon(props: any) {
     )
 }
 
-
-function MailsIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <rect width="16" height="13" x="6" y="4" rx="2" />
-            <path d="m22 7-7.1 3.78c-.57.3-1.23.3-1.8 0L6 7" />
-            <path d="M2 8v11c0 1.1.9 2 2 2h14" />
-        </svg>
-    )
-}
-
-
-function MenuIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <line x1="4" x2="20" y1="12" y2="12" />
-            <line x1="4" x2="20" y1="6" y2="6" />
-            <line x1="4" x2="20" y1="18" y2="18" />
-        </svg>
-    )
-}
-
-
 function ReceiptIcon(props: any) {
     return (
         <svg
@@ -249,48 +190,6 @@ function SendIcon(props: any) {
         >
             <path d="m22 2-7 20-4-9-9-4Z" />
             <path d="M22 2 11 13" />
-        </svg>
-    )
-}
-
-
-function SettingsIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-            <circle cx="12" cy="12" r="3" />
-        </svg>
-    )
-}
-
-
-function WalletIcon(props: any) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
-            <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
         </svg>
     )
 }

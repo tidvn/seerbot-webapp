@@ -1,4 +1,4 @@
-import { TelegramUser } from '@/types';
+import { TelegramUser } from '@/constants/types';
 import { create } from 'zustand';
 
 interface TelegramStore {

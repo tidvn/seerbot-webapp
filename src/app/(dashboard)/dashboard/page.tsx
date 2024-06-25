@@ -13,8 +13,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 export default function page() {
   return (
     <ScrollArea className="h-full">
-      <div className="flex-1  space-y-4  ">
-        <div className="flex items-center justify-between space-y-2">
+      <div className="flex-1 space-y-4  mt-6">
+        {/* <div className="flex items-center justify-between space-y-2">
           <h2 className="text-xl font-bold tracking-tight">
             Statistics information
           </h2>
@@ -28,7 +28,7 @@ export default function page() {
               <SelectItem value="Month">Month</SelectItem>
             </SelectContent>
           </Select>
-        </div>
+        </div> */}
         <div className="space-y-4">
           <div className="grid gap-4 grid-cols-2">
             <Card>
