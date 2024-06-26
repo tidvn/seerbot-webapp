@@ -3,7 +3,7 @@ import { create } from 'zustand';
 
 interface TelegramStore {
     tg: null,
-    tgData: null,
+    tgData: string,
     user: TelegramUser | null,
     setTg: (tg: any) => void;
     removeTg: () => void;
@@ -13,7 +13,7 @@ interface TelegramStore {
 export const useTelegram = create<TelegramStore>((set) => ({
     tg: null,
     user: null,
-    tgData: null,
+    tgData: "",
     setTg: (tg: any) => set(() => {
         return {
             tg: tg,

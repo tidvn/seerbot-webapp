@@ -1,9 +1,15 @@
+"use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Icons } from "@/components/common/icons"
 import { Dialog, DialogTrigger, DialogContent, DialogClose } from "@/components/ui/dialog"
 import Image from "next/image"
+import useSWR from 'swr'
+import { getWalletInformation } from "@/services"
+import { useTelegram } from "@/hooks/useTelegram"
 export default function page() {
+    const { tgData } = useTelegram();
+    const { data, error, isLoading } = useSWR(tgData, () => getWalletInformation(tgData))
     return (
         <div className="flex flex-col bg-background text-foreground">
             <div className="flex-1 py-8">
