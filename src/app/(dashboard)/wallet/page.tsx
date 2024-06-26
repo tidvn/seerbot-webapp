@@ -7,9 +7,12 @@ import Image from "next/image"
 import useSWR from 'swr'
 import { getWalletInformation } from "@/services"
 import { useTelegram } from "@/hooks/useTelegram"
+import Loading from "@/components/common/Loading"
 export default function page() {
     const { tgData } = useTelegram();
     const { data, error, isLoading } = useSWR(tgData, () => getWalletInformation(tgData))
+    if (isLoading) return <Loading />
+
     return (
         <div className="flex flex-col bg-background text-foreground">
             <div className="flex-1 py-8">
