@@ -39,8 +39,13 @@ import {
   Wallet,
   X,
   ListOrdered,
-  ChevronDown
+  ChevronDown,
+  Receipt,
+  Send,
+  BotMessageSquare,
+  BringToFront
 } from 'lucide-react';
+import { send } from 'process';
 
 export type Icon = LucideIcon;
 
@@ -72,6 +77,8 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
+  botmessagesquare: BotMessageSquare,
+  BringToFront: BringToFront,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
@@ -209,6 +216,8 @@ export const Icons = {
 
 
   ),
+  receipt: Receipt,
+  send: Send,
   order: ListOrdered,
   bot: Bot,
   areaChart: AreaChart,

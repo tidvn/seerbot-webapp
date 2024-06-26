@@ -81,7 +81,7 @@ export default function page() {
 
               </CardHeader>
               <CardContent>
-                <div className="text-xl font-bold text-green-500">29,781.6 $</div>
+                <div className="text-xl font-bold text-green-500">2,781.6 $</div>
               </CardContent>
             </Card>
             <Card>
@@ -92,7 +92,7 @@ export default function page() {
                 <Icons.lowestProfit />
               </CardHeader>
               <CardContent>
-                <div className="text-xl font-bold text-red-500">29,781.6 $</div>
+                <div className="text-xl font-bold text-red-500">2,432.6 $</div>
               </CardContent>
             </Card>
           </div>
@@ -100,17 +100,8 @@ export default function page() {
             <Card className="col-span-4">
               <CardHeader>
                 <CardTitle>Statistical graph</CardTitle>
-                <div className="flex items-center justify-between space-y-2">
-                  <Select>
-                    <SelectTrigger className="w-[80px]">
-                      <SelectValue placeholder="Bitcoin" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="bitcoin">bitcoin</SelectItem>
-                      <SelectItem value="etherum">etherum</SelectItem>
-                      <SelectItem value="solana">solana</SelectItem>
-                    </SelectContent>
-                  </Select>
+                <div className="flex items-center justify-end space-y-2">
+                  
                   <Select>
                     <SelectTrigger className="w-[80px]">
                       <SelectValue placeholder="Day" />
