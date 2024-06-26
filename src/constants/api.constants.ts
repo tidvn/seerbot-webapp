@@ -19,3 +19,4 @@ export const STT_NOT_MODIFIED = 304;
 
 // API Auth
 export const API_AUTH = "/api/auth";
+export const API_ACCOUNT = "/api/account";
